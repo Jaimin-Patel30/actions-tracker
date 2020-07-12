@@ -1,4 +1,4 @@
-name: 'NoteDown'
+name: 'Jaimin-Patel30-NoteDown'
 description: 'Note Down the record into dynamodb'
 inputs:
   milliseconds:  # id of input
