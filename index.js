@@ -8,7 +8,7 @@ const ddb = require('./ddb');
 async function run() {
   try { 
     const ms = core.getInput('milliseconds');
-    console.log(`Waiting ${ms} milliseconds ...`)
+    console.log(`Waiting for ${ms} milliseconds ...`)
     console.log('Github context : %j', github.context)
 
     core.debug((new Date()).toTimeString())
