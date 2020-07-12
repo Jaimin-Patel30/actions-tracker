@@ -1,5 +1,5 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'NoteDown'
+description: 'Note Down the record into dynamodb'
 inputs:
   milliseconds:  # id of input
     description: 'number of milliseconds to wait'
