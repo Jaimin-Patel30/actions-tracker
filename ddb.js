@@ -1,21 +1,21 @@
 var AWS = require("aws-sdk");
 const github = require("@actions/github")
 AWS.config.update({ region: process.env.AWS_REGION });
-var ddb = new AWS.DynamoDB({ apiVersion: "2012-08-10" });
 var docClient = new AWS.DynamoDB.DocumentClient();
 
-let makeEntry = function(milliseconds) {
-  // const Item = {
-  //   TableName: table
-  // }
-  return new Promise((resolve, reject) => {
-    if (typeof(milliseconds) !== 'number') { 
-      throw new Error('milleseconds not a number'); 
+let makeEntry = async function(key, secret, repo) {
+  console.log('github context : %j',github.context)
+  const timestamp = (new Date()).toDateString()
+  const Item = {
+    TableName: "actions",
+    Item:{
+      repo: repo,
+      timestamp: timestamp,
+      payload: github.context
     }
-    // console.log('github context : %j',github.context)
-
-    setTimeout(() => resolve("done!"), milliseconds)
-  });
+  }
+  const res = await docClient.put(Item).promise();
+  return res
 }
 
 module.exports = makeEntry;

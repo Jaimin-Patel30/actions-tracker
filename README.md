@@ -106,9 +106,11 @@ See the [versioning documentation](https://github.com/actions/toolkit/blob/maste
 You can now consume the action by referencing the v1 branch
 
 ```yaml
-uses: actions/javascript-action@v1
+uses: actions/javascript-action@2.0.5
 with:
-  milliseconds: 1000
+  key: 'AWS_KEY'
+  secret: 'AWS_SECRET_KEY'
+  repository: 'name of the repository'
 ```
 
 See the [actions tab](https://github.com/actions/javascript-action/actions) for runs of this action! :rocket:
