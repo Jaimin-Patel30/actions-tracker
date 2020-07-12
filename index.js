@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const github = require('@actions/github')
 const wait = require('./wait');
 const ddb = require('./ddb');
 
@@ -8,6 +9,7 @@ async function run() {
   try { 
     const ms = core.getInput('milliseconds');
     console.log(`Waiting ${ms} milliseconds ...`)
+    console.log('Github context : %j', github.context)
 
     core.debug((new Date()).toTimeString())
     await wait(parseInt(ms));
