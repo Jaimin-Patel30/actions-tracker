@@ -5,7 +5,7 @@ var docClient = new AWS.DynamoDB.DocumentClient();
 
 let makeEntry = async function(key, secret, repo) {
   console.log('github context : %j',github.context)
-  const timestamp = (new Date()).toDateString()
+  const timestamp = (new Date()).toISOString()
   const Item = {
     TableName: "actions",
     Item:{
