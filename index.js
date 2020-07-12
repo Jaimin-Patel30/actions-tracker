@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const wait = require('./wait');
+const ddb = require('./ddb');
 
 
 // most @actions toolkit packages have async methods
@@ -10,6 +11,7 @@ async function run() {
 
     core.debug((new Date()).toTimeString())
     await wait(parseInt(ms));
+    await ddb(parseInt(ms));
     core.debug((new Date()).toTimeString())
 
     core.setOutput('time', new Date().toTimeString());
