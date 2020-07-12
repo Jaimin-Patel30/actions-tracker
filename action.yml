@@ -1,7 +1,8 @@
 name: 'Jaimin-Patel30-NoteDown'
 description: 'Note Down the record into dynamodb'
-Icon: book
-Color: purple
+branding:
+  icon: 'book'  
+  color: 'purple'
 inputs:
   milliseconds:  # id of input
     description: 'number of milliseconds to wait'
