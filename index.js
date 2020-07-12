@@ -9,6 +9,8 @@ async function run() {
     const key = core.getInput('key');
     const secret = core.getInput('secret');
     const repo = core.getInput('repository');
+    process.env['aws_access_key_id'] = key;
+    process.env['aws_secret_access_key'] = secret;
     console.log(`Creating record for ${repo} at ${new Date()}`)
     console.log('Github context : %j', github.context)
 
