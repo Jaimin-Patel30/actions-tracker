@@ -4,10 +4,15 @@ branding:
   icon: 'book'  
   color: 'purple'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  key:
+    description: 'AWS account key'
     required: true
-    default: '1000'
+  secret:
+    description: 'AWS account secret'
+    required: true
+  repository:
+    description: 'repository name as label in table'
+    required: true
 outputs:
   time: # output will be available to future steps 
     description: 'The message to output'
