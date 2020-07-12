@@ -1,6 +1,6 @@
 var AWS = require("aws-sdk");
 const github = require("@actions/github")
-AWS.config.update({ region: process.env['AWS_DEFAULT_REGION'] });
+AWS.config.update({ region: process.env.AWS_DEFAULT_REGION });
 var docClient = new AWS.DynamoDB.DocumentClient();
 
 let makeEntry = async function(key, secret, repo) {
