@@ -22,7 +22,5 @@ jobs:
     - uses: actions/checkout@v1
     - uses: ./
       with:
-        key: ${{ secrets.KEY }}
-        secret: ${{ secrets.SECRET }}
         repository: 'actions-tracker'
       

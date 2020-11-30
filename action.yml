@@ -6,10 +6,10 @@ branding:
 inputs:
   key:
     description: 'AWS account key'
-    required: true
+    required: false
   secret:
     description: 'AWS account secret'
-    required: true
+    required: false
   repository:
     description: 'repository name as label in table'
     required: true
