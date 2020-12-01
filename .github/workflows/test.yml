@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: install module
+      run: |
+        npm ci
     - uses: ./
       with:
         repository: 'actions-tracker'
