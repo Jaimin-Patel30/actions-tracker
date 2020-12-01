@@ -24,7 +24,8 @@ jobs:
         node-version: '12.x'
     - name: install module
       run: |
-        npm ci
+        npm --version
+        npm install
     - uses: ./
       with:
         repository: 'actions-tracker'
